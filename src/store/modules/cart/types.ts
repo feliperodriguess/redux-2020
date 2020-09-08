@@ -1,11 +1,11 @@
 export interface IProduct {
-  id: Number;
+  id: number;
   title: string;
   price: number;
 }
 
 export interface ICartItem {
-  product: object;
+  product: IProduct;
   quantity: number;
 }
 
