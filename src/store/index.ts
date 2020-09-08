@@ -9,6 +9,8 @@ export interface IState {
   cart: ICartState;
 }
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const middlewares = [logger];
+
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 export default store;
